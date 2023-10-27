@@ -1,9 +1,10 @@
-phr(G,N,T)-->subj(G,N),pred(T,N).
-pred(T,N)-->v(T,N),objd(G,M).
-pred(T,N)-->v(T,N),sadj(G,M).
-pred(T,N)-->vti(T,N),sprep(G,M).
-objd(G,N)-->n(G,N).
-objd(G,N)-->det(G,N),n(G,N).
+phr(G,N,T)-->subj(G,N),pred(G,T,N).
+pred(G,T,N)-->vcop(T,N),obj(G,N).
+pred(G,T,N)-->v(T,N),obj(J,M).
+pred(G,T,N)-->v(T,N),sadj(J,M).
+pred(G,T,N)-->vti(T,N),sprep(J,M).
+obj(G,N)-->n(G,N).
+obj(G,N)-->det(G,N),n(G,N).
 subj(G,N)-->n(G,N).
 subj(G,N)-->det(G,N),n(G,N).
 sadj(G,N)-->subj(G,N),adj(G,N).
@@ -20,7 +21,8 @@ det(m,p)-->[os].
 det(f,s)-->[uma].
 det(m,s)-->[um].
 adj(m,s)-->[pequeno].
-v(pre,s)-->[é].
-v(pas,s)-->[era].
+vcop(pre,s)-->[é].
+vcop(pas,s)-->[era].
+v(pas,s)-->[comeu].
 vti(pre,p)-->[voam].
 prep(f,s)-->[na].
