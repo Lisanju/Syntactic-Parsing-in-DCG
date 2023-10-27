@@ -13,6 +13,8 @@ sentença-->sintagma_nominal,sintagma_verbal.
 
 sintagma_verbal-->verbo,sintagma_nominal.
 
+sintagma_nominal-->determinante,nome.
+
 determinante-->[o].
 
 nome-->[gato].
