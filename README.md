@@ -32,3 +32,8 @@ Do mesmo modo, um objeto pode ser constituído por um nome próprio; um nome; um
 Os símbolos terminais incluem as unidades lexicais 'nana' e 'zoinho' para nomes próprios; 'gata', 'gato' e 'tucanos' para nomes; 'ufscar' para um nome especificado como objeto indireto; 'a', 'o', 'os', 'uma' e 'um' para determinantes; 'pequeno' para adjetivo; 'é' e 'era' para cópula; 'comeu' para verbo transitivo; 'voam' para verbo transitivo indireto; 'na' para preposição.
 
 Cada regra de produção possui atributos como gênero (G|J), número (N|M) e tempo (T), que são preenchidos pelos valores especificados no léxico de gênero (f|m), número (s|p) e tempo (pre|pas).
+
+A escolha de diferentes atributos para gênero (G|J) e número (N|M) está no fato de que um argumento interno não necessariamente precisa concordar em número e gênero com um argumento externo, mas sim com os constituintes dos sintagmas que eles pertencem. Também é por isso que a rotulação por função sintática foi escolhida, ela é conveniente para separar a concordância para os elementos de cada regra de produção.
+
+## struct.pl
+
