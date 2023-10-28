@@ -5,7 +5,7 @@ pred(G,T,N)-->vt(T,N),sadj(J,M).
 pred(G,T,N)-->vti(T,N),sprep(J,M).
 obj(G,N)-->nprop(G,N).
 obj(G,N)-->n(G,N).
-obj(G,N)-->nprop(G,N).
+obj(G,N)-->det(G,N),nprop(G,N).
 obj(G,N)-->det(G,N),n(G,N).
 subj(G,N)-->nprop(G,N).
 subj(G,N)-->det(G,N),nprop(G,N).
