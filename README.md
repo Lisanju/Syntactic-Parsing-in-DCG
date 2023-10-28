@@ -23,7 +23,7 @@ nome-->[besouro].
 
 verbo-->[esmagou].
 
-## parser.pl
+## syntactic-parser.pl
 
 Declarei apenas 14 regras de produção de sentenças, rotulei a superfície da sentença a partir das suas funções sintáticas. Então, uma sentença é uma frase constituída por sujeito e predicado. Um predicado pode ser constituído por uma cópula e um nome como objeto; um verbo transitivo e um nome como objeto; um verbo transitivo e um sintagma adjetival como objeto; um verbo transitivo indireto e um sintagma preposicional como objeto. Um sujeito pode ser constituído por um nome próprio; um determinante e um nome próprio; um determinante e um nome.
 
