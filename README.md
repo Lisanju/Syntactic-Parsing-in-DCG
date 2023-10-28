@@ -38,7 +38,9 @@ A escolha de diferentes atributos para gênero (G|J) e número (N|M) está no fa
 
 phr(G,N,T,S,[]).
 
-**Para**
+**Para checar se uma sentença pode ser gerada a partir das regras de produção, utiliza-se o comando:**
+
+phr(G,N,T,[palavras,da,sentença,separadas,por,vírgula],[]).
 
 ## struct.pl
 O reconhecimento fornecido pelo processamento sintático acima é limitado, pois apenas informa se uma sentença pode ser gerada ou não a partir das regras de produção declaradas, não informando sobre a estrutura do input. Para representar estruturalmente o input, podemos explicitar em Prolog os constituintes e suas combinações como argumentos. Por exemplo:
