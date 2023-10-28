@@ -24,7 +24,6 @@ nome-->[besouro].
 verbo-->[esmagou].
 
 ## syntactic-parser.pl
-
 Declarei apenas 14 regras de produção de sentenças, rotulei a superfície da sentença a partir das suas funções sintáticas. Então, uma sentença é uma frase constituída por sujeito e predicado. Um predicado pode ser constituído por uma cópula e um nome como objeto; um verbo transitivo e um nome como objeto; um verbo transitivo e um sintagma adjetival como objeto; um verbo transitivo indireto e um sintagma preposicional como objeto. Um sujeito pode ser constituído por um nome próprio; um determinante e um nome próprio; um determinante e um nome.
 
 Do mesmo modo, um objeto pode ser constituído por um nome próprio; um nome; um determinante e um nome próprio; um determinante e um nome. Um sintagma adjetival pode ser constituído por um sujeito e um adjetivo. Um sintagma preposicional pode ser constituído por uma preposição e um objeto indireto.
@@ -35,5 +34,25 @@ Cada regra de produção possui atributos como gênero (G|J), número (N|M) e te
 
 A escolha de diferentes atributos para gênero (G|J) e número (N|M) está no fato de que um argumento interno não necessariamente precisa concordar em número e gênero com um argumento externo, mas sim com os constituintes dos sintagmas que eles pertencem. Também é por isso que a rotulação por função sintática foi escolhida, ela é conveniente para separar a concordância para os elementos de cada regra de produção.
 
-## struct.pl
+**Para gerar todas as sentenças possíveis a partir das regras de produção, utiliza-se o comando:**
 
+phr(G,N,T,S,[]).
+
+**Para**
+
+## struct.pl
+O reconhecimento fornecido pelo processamento sintático acima é limitado, pois apenas informa se uma sentença pode ser gerada ou não a partir das regras de produção declaradas, não informando sobre a estrutura do input. Para representar estruturalmente o input, podemos explicitar em Prolog os constituintes e suas combinações como argumentos. Por exemplo:
+
+s(s(SN,SV))-->sn(SN),sv(SV).
+
+Lê-se que a estrutura a ser analisada de s é s(SN,SV), em que a estrutura de sn é SN e a estrutura de sv é SV.
+
+Desse modo, é fornecido como output do processamento sintático informações estruturais sobre as sentenças que podem ser geradas a partir das regras de produção estabelecidas na Gramática. Por isso, refinei as regras de produção com informações estruturais em struct.pl.
+
+**Para gerar a estrutura sintática de todas as sentenças possíveis a partir das regras de produção, utiliza-se o comando:** 
+
+phr(Struct,X,[ ]).
+
+**Para checar a estrutura sintática de uma sentença em específico a partir das regras de produção, utiliza-se o comando:** 
+
+s(Struct,[palavras,da,sentença,separadas,por,vírgula],[]).
