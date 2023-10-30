@@ -16,7 +16,7 @@ pp_valid(por,X) :- interj(X),!,fail.
 pp_valid(por,X) :- arg(X).
 arg(X) :- loc(X).
 arg(X) :- temp(X).
-arg(x) :- interj(X).
+arg(X) :- interj(X).
 loc(a).
 temp(b).
 interj(c).
