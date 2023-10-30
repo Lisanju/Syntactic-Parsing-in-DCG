@@ -11,10 +11,24 @@ pp(pp(P,NP,GEN,NUM))-->p(P),np(np(NP,GEN,NUM)).
 pp(pp(P,VP,GEN,NUM))-->p(P),vp(vp(VP,TEM,NUM,MOD,ASP)).
 vp(vp(V,NP,TEM,NUM,MOD,ASP))-->v(V,TEM,NUM,MOD,ASP),np(np(NP,GEN,NUM)).
 vp(vp(VP,PP,TEM,NUM,MOD,ASP))-->vp(vp(VP,TEM,NUM,MOD,ASP)),pp(pp(PP,GEN,NUM)).
+
+pp_valid(por,X) :- interj(X),!,fail.
+pp_valid(por,X) :- arg(X).
+arg(X) :- loc(X).
+arg(X) :- temp(X).
+arg(x) :- interj(X).
+loc(a).
+temp(b).
+interj(c).
+?- pp_valid(por,a). % TRUE %
+?- pp_valid(por,b). % TRUE %
+?- pp_valid(por,c). % FALSE %
+
 n(n(gato),masc,sing)-->[gato].
 n(n(gata),fem,sing)-->[gata].
 n(n(gatos),masc,plu)-->[gatos].
 n(n(gatas),fem,plu)-->[gatas].
+n(n(horas),fem,plu)-->[horas].
 nprop(nprop(joão),masc)-->[joão].
 nprop(nprop(maria),fem)-->[maria].
 det(det(o),masc,sing)-->[o].
