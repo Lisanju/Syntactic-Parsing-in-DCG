@@ -1,5 +1,5 @@
 # Syntactic-Parsing-in-DCG
-Implementação em Prolog de processamento sintático pela Gramática de Cláusula Definida, com funções gramaticais, restrições de gênero, número e tempo, informações estruturais e aplicação do artigo-nu. Projeto feito para a disciplina 'Laboratório 3 - PLN' no curso de Linguística - UFSCar.
+Implementação em Prolog de processamento sintático pela Gramática de Cláusula Definida, com funções gramaticais, restrições de gênero, número e tempo, informações estruturais e aplicação do artigo-nu. Projeto feito para a disciplina 'Laboratório 3 - PLN', ministrada pela Profa. Dra. Ariani Di Felippo no curso de Bacharelado em Linguística pela UFSCar.
 
 ## Processamento Sintático (Parsing)
 Análise sintática ou parsing consiste em estruturar, de forma completa ou parcial, as sentenças de uma língua, definindo como as palavras se organizam e que funções elas cumprem (JURAFSKY & MARTIN, 2008).
